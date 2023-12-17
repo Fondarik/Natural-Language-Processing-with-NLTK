@@ -1,0 +1,16 @@
+import nltk
+from nltk import word_tokenize, pos_tag, ne_chunk
+
+nltk.download('punkt')
+nltk.download('maxent_ne_chunker')
+nltk.download('words')
+
+sentence = "Apple is a company based in California."
+
+# Tokenize and perform POS tagging
+tokens = word_tokenize(sentence)
+pos_tags = pos_tag(tokens)
+
+# Perform Named Entity Recognition (NER)
+ner_result = ne_chunk(pos_tags)
+print(ner_result)
