@@ -1,0 +1,15 @@
+import nltk
+from nltk.stem import PorterStemmer
+
+text = "Stemming is a technique used to extract the base form of words."
+
+# Initialize the Porter Stemmer
+stemmer = PorterStemmer()
+
+# Tokenize the text into words
+words = word_tokenize(text)
+
+# Perform stemming on each word
+stemmed_words = [stemmer.stem(word) for word in words]
+print("Stemmed Words:")
+print(stemmed_words)
